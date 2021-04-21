@@ -16,6 +16,6 @@ end
 class Quote
     belongs_to :characters
 
-    :content 
+    :content
 
 end

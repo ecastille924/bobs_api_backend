@@ -1,0 +1,21 @@
+class Charater
+    has_many :traits
+    has_many :quotes
+
+    :first_name
+    :last_name
+    :age
+    :occupation 
+
+class Trait
+    belongs_to :characters 
+
+    :description 
+end 
+
+class Quote
+    belongs_to :characters
+
+    :content 
+
+end

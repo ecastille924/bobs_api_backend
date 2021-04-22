@@ -1,11 +1,11 @@
 class QuotesController < ApplicationController
     def index
         quotes = Quote.all
-        render json:quoteSerializer.new(quotes, {only: [:content]})
+        render json:QuoteSerializer.new(quotes, {only: [:content]})
     end
 
     def show 
         quote = Quote.find(params[:id])
-        render json:quoteSerializer.new(quote)
+        render json:QuoteSerializer.new(quote)
     end
 end

@@ -17,4 +17,10 @@ class QuotesController < ApplicationController
             render json: {error: "quote invalid"}
         end
     end
+
+    private 
+
+    def quote_params
+        params.require(:quote).permit(:content)
+    end
 end
